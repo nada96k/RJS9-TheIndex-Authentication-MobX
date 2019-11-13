@@ -35,8 +35,12 @@ class AuthStore {
       const user = res.data;
       this.setUser(user.token);
     } catch (err) {
-      console.error(err.response.data);
+      console.error(err.response);
     }
+  };
+
+  logout = () => {
+    this.setUser();
   };
 }
 decorate(AuthStore, {
