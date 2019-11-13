@@ -23,9 +23,9 @@ const Sidebar = () => {
         <h4 className="menu-item">
           <NavLink to="/signup">SIGN UP</NavLink>
         </h4>
-        <button className="btn btn-danger" onClick={authStore.logout}>
-          Logout {authStore.user}
-        </button>
+        <h4 className="menu-item">
+        <Logout />
+        </h4>
       </section>
     </div>
   );
