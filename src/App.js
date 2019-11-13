@@ -10,6 +10,7 @@ import AuthorDetail from "./AuthorDetail";
 import BookList from "./BookList";
 import LoginForm from "./forms/LoginForm";
 import SignupForm from "./forms/SignupForm";
+import Logout from "./Logout";
 
 // Store
 import authorStore from "./stores/AuthorStore";
@@ -28,6 +29,7 @@ function App() {
           <Route path="/books/:bookColor?" component={BookList} />
           <Route path="/login" component={LoginForm} />
           <Route path="/signup" component={SignupForm} />
+          <Route path="/logout" component={Logout} />
         </Switch>
       );
     }
