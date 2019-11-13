@@ -5,9 +5,7 @@ import authStore from "./stores/authStore";
 
 const Logout = () => {
   return (
-    <button className="btn btn-danger" onClick={authStore.logout}>
-      LOGOUT {authStore.user.username}
-    </button>
+   <NavLink to="/logout">LOGOUT from {authStore.user.username}</NavLink>
   );
 };
 
