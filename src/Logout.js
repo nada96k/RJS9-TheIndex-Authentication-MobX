@@ -5,10 +5,10 @@ import authStore from "./stores/authStore";
 
 const logout = () => {
   return (
-    <button className="btn btn-danger" onClick={() => alert("LOGOUT!!")}>
-      LOGOUT {authStore.user.username}
+    <button className="btn btn-danger" onClick={authStore.logout}>
+      LOGOUT from {authStore.user.username}
     </button>
   );
 };
 
-export default observer(Logout);
+export default observer(logout);

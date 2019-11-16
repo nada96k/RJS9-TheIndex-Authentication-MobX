@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import { observer } from "mobx-react";
+
+// Stores
 import authStore from "../stores/authStore";
 
 class Signup extends Component {
@@ -16,10 +19,10 @@ class Signup extends Component {
   handleSubmit = event => {
     event.preventDefault();
     authStore.signup(this.state);
-    authStore.signupUser(this.state, this.props.history);
   };
 
   render() {
+    if (authStore.user) return <Redirect to="/" />;
     const { username, email, password } = this.state;
 
     return (
@@ -78,4 +81,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default observer(Signup);

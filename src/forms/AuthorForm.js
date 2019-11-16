@@ -20,6 +20,9 @@ class AuthorForm extends Component {
     this.props.closeModal();
   };
 
+  handleChange = event =>
+    this.setState({ [event.target.name]: event.target.value });
+
   render() {
     return (
       <div>
